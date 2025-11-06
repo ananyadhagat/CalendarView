@@ -1,0 +1,45 @@
+/* src/styles/globals.css */
+
+/* Tailwind layers (keep these three, remove any tailwind @import lines) */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Visual accessibility defaults */
+:root { color-scheme: light; }
+
+/* Clear, consistent focus ring for keyboard users */
+*:focus-visible {
+  outline: 2px solid #0ea5e9; /* primary-500 */
+  outline-offset: 2px;
+}
+
+/* Ensure good legibility on event chips regardless of bg color */
+.event-chip {
+  color: #111827;            /* gray-900 */
+  filter: saturate(1) contrast(1.2);
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Allow text resizing up to 200% without layout breakage */
+html { font-size: 100%; }
+@media (max-width: 400px) {
+  html { font-size: 112.5%; } /* helps small screens + zoomed UIs */
+}
+
+/* Optional: utility helpers used across calendar */
+.visually-hidden {
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}
