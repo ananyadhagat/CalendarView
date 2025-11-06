@@ -1,73 +1,75 @@
-# React + TypeScript + Vite
+# 📅 Calendar View Component
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple yet elegant calendar interface built with React and TypeScript — complete with event management, responsive layouts, and Storybook documentation.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🔗 Live Storybook
 
-## React Compiler
+[Deployed Storybook Link](https://your-deployment-link.com)
+*(Replace this link with your Chromatic, Vercel, or Netlify Storybook URL)*
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## ⚙️ Installation
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+To get started locally, clone the repository and run:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
+npm run storybook
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+This will install all dependencies and launch Storybook for component previews.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🧱 Architecture
+
+The project is organized for clarity and reusability:
+
+* **`src/components/Calendar/`** → Calendar UI components like `MonthView`, `CalendarCell`, and `CalendarView`
+* **`src/hooks/`** → Custom hooks such as `useEventManager` to manage event state
+* **`src/utils/`** → Helper utilities for date calculations and grid generation
+* **`.storybook/`** → Storybook setup and configuration files
+* **`*.stories.tsx`** → Storybook stories documenting each component
+
+Each module is type-safe, modular, and documented for easy integration and testing.
+
+---
+
+## ✨ Features
+
+* [x] **Month & Week Views** – Switch easily between monthly and weekly layouts
+* [x] **Event Management** – Add, edit, and display events through a simple modal
+* [x] **Responsive Design** – Works smoothly on all screen sizes
+* [x] **Keyboard Accessibility** – Navigate and interact using keyboard shortcuts
+
+---
+
+## 📖 Storybook Stories
+
+A few of the documented stories include:
+
+* `CalendarView.stories.tsx` – Renders the main calendar view with events
+* `CalendarCell.stories.tsx` – Demonstrates an individual cell’s interactions
+* `EventModal.stories.tsx` – Showcases the event creation and editing flow
+* `useEventManager.stories.tsx` – Explains how the custom event manager hook works
+* `DateUtils.stories.tsx` – Displays grid generation and date logic visuals
+
+---
+
+## 🧰 Technologies
+
+* ⚛️ **React + TypeScript** – Core stack for building robust components
+* 🎨 **Tailwind CSS** – Lightweight and responsive styling
+* 📘 **Storybook** – For isolated component testing and documentation
+* ⚡ **Vite** – Super-fast development and build tool
+
+---
+
+## 📩 Contact
+
+**Developed by:** [Ananya Dhagat](https://github.com/ananyadhagat)
+Gmail: ananya2004d@gmail.com
+**GitHub:** [https://github.com/ananyadhagat/CalendarView](https://github.com/ananyadhagat/CalendarView)
