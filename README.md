@@ -6,8 +6,8 @@ A simple yet elegant calendar interface built with React and TypeScript — comp
 
 ## 🔗 Live Storybook
 
-[Deployed Storybook Link](https://your-deployment-link.com)
-*(Replace this link with your Chromatic, Vercel, or Netlify Storybook URL)*
+[Deployed Storybook Link] https://690cd7a7c160aa46dacdbf82-oubcsxcghq.chromatic.com/
+
 
 ---
 
